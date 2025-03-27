@@ -34,8 +34,3 @@ if __name__ == "__main__":
     print(f"Accuracy: {accuracy}")
     print(f"Confusion Matrix:\n{confusion_mat}")
 
-    input = [[302, 102, 2.0, 1.5, 8, 0, 1, 0, 0, 0, 1, 0]]
-
-    pretest = model.predict(input)
-
-    print(f"pre: {pretest}")

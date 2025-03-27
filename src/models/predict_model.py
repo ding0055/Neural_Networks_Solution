@@ -5,8 +5,6 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 def evaluate_model(model, x_test_scaled, y_test):
     # Predict the loan eligibility on the testing set
     y_pred = model.predict(x_test_scaled)
-    print(y_pred)
-    print(y_test)
 
     # Calculate the accuracy score
     accuracy = accuracy_score(y_test, y_pred)

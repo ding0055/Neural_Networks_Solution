@@ -26,4 +26,7 @@ def train_Neuralmodel(df):
     with open('models/Neuralmodel.pkl', 'wb') as f:
         pickle.dump(Neuralmodel, f)
 
+    with open('models/scaler.pkl', 'wb') as f:
+        pickle.dump(scaler, f)
+
     return Neuralmodel, xtest_scaled, ytest

@@ -14,6 +14,9 @@ based on various academic and research factors.
 with open("models/Neuralmodel.pkl", "rb") as model_file:
     nn_model = pickle.load(model_file)
 
+with open("models/scaler.pkl", "rb") as scaler_file:
+    scaler = pickle.load(scaler_file)
+
 # User Input Form
 with st.form("student_input_form"):
     st.subheader("Student Profile")
@@ -47,11 +50,12 @@ if submitted:
                             University_Rating_1, University_Rating_2, University_Rating_3,
                             University_Rating_4, University_Rating_5,
                             Research_0, Research_1]]
+    
+    input_data_scaled = scaler.transform(input_data)
 
     # Predict admission outcome (1 = Admitted, 0 = Not Admitted)
-    prediction = nn_model.predict(input_data)
+    prediction = nn_model.predict(input_data_scaled)
 
-    st.write(prediction)
 
     # Display result
     st.subheader("Prediction Result:")

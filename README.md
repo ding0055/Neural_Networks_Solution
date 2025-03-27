@@ -1,49 +1,57 @@
-# credit_eligibility_application
-This app has been built using Streamlit and deployed with Streamlit community cloud
-
-[Visit the app here](https://loan-application-app.streamlit.app/)
-
-password - streamlit
-
-This application predicts whether someone is eligible for a loan based on inputs derived from the German Credit Risk dataset. The model aims to help users assess loan eligibility by leveraging machine learning predictions.
+# UCLA_Admission_Predictor
+This application predicts UCLA graduate program admission chances using a Neural Network model, featuring an interactive Streamlit interface for real-time probability assessment.
 
 ## Features
-- User-friendly interface powered by Streamlit.
-- Input form to enter details such as credit history, loan amount, income, and other relevant factors.
-- Real-time prediction of loan eligibility based on the trained model.
-- Accessible via Streamlit Community Cloud.
+Comprehensive data preprocessing pipeline with logging and error handling
+Interactive form for academic profile input
+Pre-trained Neural Network model with MinMax scaling
+Real-time prediction with visual feedback (success/error messages)
+Model training visualization via loss curve
 
-## Dataset
-The application is trained on the **German Credit Risk dataset**, a widely used dataset for evaluating creditworthiness. It includes features like:
-- Age
-- Job
-- Housing status
-- Credit amount
-- Duration of credit
-- Purpose of loan
-- And other factors influencing credit risk.
+## Data Processing
+The project includes robust data loading and preprocessing with:
+
+Error handling for missing files and data corruption
+Logging of all data transformations
+Data validation checks
+
+## Feature Engineering
+Feature engineering includes:
+
+Feature scaling: MinMax normalization via pre-fitted scaler
+Input structuring: Maintains exact feature order required by model
+Dimensionality: Expands 6 raw inputs to 12 model features through encoding
 
 ## Technologies Used
-- **Streamlit**: For building the web application.
-- **Scikit-learn**: For model training and evaluation.
-- **Pandas** and **NumPy**: For data preprocessing and manipulation.
-- **Matplotlib** and **Seaborn**: For exploratory data analysis and visualization (if applicable).
+Python: Core application logic
+Streamlit: Interactive web interface
+Scikit-learn: Neural Network classifier
+Pickle: Model and scaler serialization
+Matplotlib/Seaborn: Loss curve visualization
 
 ## Model
-The predictive model is trained using the German Credit Risk dataset. It applies preprocessing steps like encoding categorical variables and scaling numerical features. The classification model used may include algorithms such as Logistic Regression, Random Forest, or XGBoost.
+Algorithm: Neural Network Classifier
 
-## Future Enhancements
-* Adding support for multiple datasets.
-* Incorporating explainability tools like SHAP to provide insights into predictions.
-* Adding visualizations to better represent user input and model predictions.
+Input Features:
+GRE Score
+TOEFL Score
+University Rating (one-hot encoded)
+SOP Strength
+LOR Strength
+CGPA
+Research Experience
+
+Output: Binary prediction (1 = Admitted, 0 = Not Admitted)
+
+Training Insight: Loss curve visualization (PNG)
 
 ## Installation (for local deployment)
 If you want to run the application locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/credit_eligibility_application.git
-   cd credit_eligibility_application
+   git clone https://github.com/ding0055/Regression_Models_Solution
+   cd Regression_Models_Solution
 
 2. Create and activate a virtual environment:
    ```bash
@@ -58,4 +66,4 @@ If you want to run the application locally, follow these steps:
    ```bash
    streamlit run app.py
 
-#### Thank you for using the Credit Eligibility Application! Feel free to share your feedback.
+#### Thank you for using the UCLA_Admission_Predictor! Feel free to share your feedback.
