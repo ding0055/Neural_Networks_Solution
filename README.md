@@ -66,4 +66,7 @@ If you want to run the application locally, follow these steps:
    ```bash
    streamlit run app.py
 
+## Streamlit App Link:
+https://neuralnetworkapplution-cnhyqzmeycrx53mrnbjkgt.streamlit.app/
+
 #### Thank you for using the UCLA_Admission_Predictor! Feel free to share your feedback.
